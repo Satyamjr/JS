@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    //blocking code vs non-blocking cod
+    //inner HTML
+
+    let intervalId = null; // Store the interval ID here
+
+    const sayDate = function(str) {
+        console.log(str, Date.now());
+    }
+
+    // Start button functionality
+    document.querySelector('#start').addEventListener('click', function() {
+        if (intervalId === null) { // Prevent multiple intervals
+            intervalId = setInterval(sayDate, 1000, "hi");
+            console.log("Started!");
+        } else {
+            console.log("Already running!");
+        }
+    });
+
+    // Stop button functionality
+    document.querySelector('#stop').addEventListener('click', function() {
+        if (intervalId !== null) {
+            clearInterval(intervalId);
+            intervalId = null; // Reset interval ID
+            console.log("STOPPED");
+        } else {
+            console.log("Nothing to stop!");
+        }
+    });
+</script>
+</html>
