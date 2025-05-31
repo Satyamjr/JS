@@ -62,7 +62,13 @@ const myn2 = myArry.splice(1, 3);
 console.log(myArry)
 console.log(myn2)
 
-
+// In JavaScript, the spread operator is denoted by three consecutive dots (...).
+// It allows an iterable (like an array or string) to be expanded, or "spread out," 
+// into individual elements. It can also be used to spread the properties of an object
+// into a new object. 
+// This operator is particularly useful for combining arrays, copying arrays, 
+// and merging objects.
+// Example of using the spread operator with arrays
 
 const Marvel_heros = ["Iron-man",  "Spiderman", "Hulk", "Thor"];
 const DC_heros = ["Batman", "Superman", "Flash", "Wonder woman"]
